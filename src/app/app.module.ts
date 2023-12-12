@@ -1,16 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
+
+import {NouisliderModule} from 'ng2-nouislider'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { PerfilComponent } from './components/usuario/perfil/perfil.component';
+import { SidebarComponent } from './components/usuario/sidebar/sidebar.component';
+import { IndexProductoComponent } from './components/productos/index-producto/index-producto.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InicioComponent,
+    NavComponent,
+    FooterComponent,
+    LoginComponent,
+    PerfilComponent,
+    SidebarComponent,
+    IndexProductoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NouisliderModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
